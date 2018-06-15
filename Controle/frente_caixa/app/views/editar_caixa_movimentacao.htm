@@ -1,0 +1,63 @@
+
+
+<h1>Editar: Caixa Movimentacao</h1>
+
+<div class="text-right">
+	<a href="principal.php#!caixa_movimentacao" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Valor Abertura &nbsp;&nbsp;
+	<input type="number" class="form-control" id="valor_abertura_caixa_movimentacao" onkeyup="limitarValorNum('valor_abertura_caixa_movimentacao', );"  accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Valor Fechamento &nbsp;&nbsp;
+	<input type="number" class="form-control" id="valor_fechamento_caixa_movimentacao" onkeyup="limitarValorNum('valor_fechamento_caixa_movimentacao', );"  >
+</div>
+<div class="col-md-4">
+	<br>Data Fechamento &nbsp;&nbsp;
+	<input type="date" class="form-control" id="data_fechamento_caixa_movimentacao" onkeyup="limitarValorNum('data_fechamento_caixa_movimentacao', );"  >
+</div>
+<div class="col-md-4">
+	<br>Caixa &nbsp;&nbsp;<span style='color: red'>*</span>
+	<div id="caixaDiv"></div>
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_caixa_movimentacao" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_abertura_caixa_movimentacao">
+			<script>$("#data_abertura_caixa_movimentacao").val("1")</script>
+			
+			<input type="hidden" id="data_atualizacao_caixa_movimentacao">
+			<script>$("#data_atualizacao_caixa_movimentacao").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='atualizarrRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Atualizar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('caixa_movimentacao');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_editar_caixa_movimentacao.js"></script>
+
+<script type="text/javascript" src="app/js/combo/caixaComboPre.js"></script>
+<script type="text/javascript" src="app/js/combo/caixaComboGrade.js"></script>
+<div id="scriptsAdicionais"></div>

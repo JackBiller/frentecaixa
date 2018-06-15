@@ -1,0 +1,26 @@
+
+<h1>Item Unidade Medida</h1>
+<h3 style='display: none'>Item: <span id="nomeItem"></span></h3>
+
+<span id="botaoVoltarGrade"></span>
+<div class="col-md-4 col-xs-12">
+	<input class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon2" id="pesquisa_item_unidade_medida" accesskey="b" onkeyup='buscar_item_unidade_medida()'>
+</div>
+
+
+<div class="col-md-8 col-xs-12 text-right">
+	<!-- &nbsp; -->
+	<a href="principal.php#!adicionar_grade_item_unidade_medida-item" class="btn btn-success" accesskey="a">
+		<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Adicionar Item Unidade Medida
+	</a>
+</div>
+
+<br><br>
+
+<script type="text/javascript">
+	verificaAcess('item_unidade_medida-item');
+</script>
+
+<div id="conteudoItem_unidade_medida"></div>
+
+<script type="text/javascript" src="app/js/ajax/ajax_grade_item_unidade_medida-item.js"></script>

@@ -1,0 +1,49 @@
+
+
+<h1>Adicionar: Unidade Medida</h1>
+
+<div class="text-right">
+	<a href="principal.php#!unidade_medida" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Descrição &nbsp;&nbsp;
+	<input type="text" maxlength="100" class="form-control" id="descricao_unidade_medida" accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Sigla &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="text" maxlength="100" class="form-control" id="sigla_unidade_medida" >
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_unidade_medida" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_atualizacao_unidade_medida">
+			<script>$("#data_atualizacao_unidade_medida").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='gravarRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Gravar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('unidade_medida');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_adicionar_unidade_medida.js"></script>
+

@@ -1,0 +1,67 @@
+
+
+<h1>Editar: Pedido Pagamento</h1>
+
+<div class="text-right">
+	<a href="principal.php#!grade_pedido_pagamento-pedido" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Parcela Atual &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="number" class="form-control" id="parcela_atual_pedido_pagamento" onkeyup="limitarValorNum('parcela_atual_pedido_pagamento', 11);"  accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Parcela Total &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="number" class="form-control" id="parcela_total_pedido_pagamento" onkeyup="limitarValorNum('parcela_total_pedido_pagamento', 11);"  >
+</div>
+<div class="col-md-4">
+	<br>Valor Pago &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="number" class="form-control" id="valor_pago_pedido_pagamento" onkeyup="limitarValorNum('valor_pago_pedido_pagamento', );"  >
+</div>
+<div class="col-md-4">
+	<br>Esta Pago? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_esta_pago_pedido_pagamento" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+<div class="col-md-4">
+	<br>Condição De Pagamento &nbsp;&nbsp;<span style='color: red'>*</span>
+	<div id="condicao_de_pagamentoDiv"></div>
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_pedido_pagamento" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="pedido_id">
+			<script>$("#pedido_id").val(retornaValorIdTabelaPrimaria('pedido', 'pedido_pagamento'))</script>
+			
+			<input type="hidden" id="data_atualizacao_pedido_pagamento">
+			<script>$("#data_atualizacao_pedido_pagamento").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='atualizarrRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Atualizar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('pedido_pagamento-pedido');
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_editar_pedido_pagamento.js"></script>
+
+<script type="text/javascript" src="app/js/combo/condicao_de_pagamentoComboPre.js"></script>
+<script type="text/javascript" src="app/js/combo/condicao_de_pagamentoComboGrade.js"></script>

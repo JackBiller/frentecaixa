@@ -1,0 +1,49 @@
+
+
+<h1>Adicionar: Estado</h1>
+
+<div class="text-right">
+	<a href="principal.php#!estado" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Descrição &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="text" maxlength="50" class="form-control" id="descricao_estado" accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Sigla &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="text" maxlength="2" class="form-control" id="sigla_estado" >
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_estado" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_atualizacao_estado">
+			<script>$("#data_atualizacao_estado").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='gravarRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Gravar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('estado');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_adicionar_estado.js"></script>
+

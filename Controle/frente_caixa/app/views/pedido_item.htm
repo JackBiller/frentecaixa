@@ -1,0 +1,24 @@
+
+<h1>Pedido Item</h1>
+
+<div class="col-md-4 col-xs-12">
+	<input class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon2" id="pesquisa_pedido_item" accesskey="b" onkeyup='buscar_pedido_item()'>
+</div>
+
+
+
+<div class="col-md-8 col-xs-12 text-right">
+	<a href="principal.php#!adicionar_pedido_item" class="btn btn-success" accesskey="a">
+		<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Adicionar Pedido Item
+	</a>
+</div>
+
+<br><br>
+
+<div id="conteudoPedido_item"></div>
+
+<script type="text/javascript">
+	verificaAcess('pedido_item');
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_lista_pedido_item.js"></script>

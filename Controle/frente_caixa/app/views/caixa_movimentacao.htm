@@ -1,0 +1,24 @@
+
+<h1>Caixa Movimentacao</h1>
+
+<div class="col-md-4 col-xs-12">
+	<input class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon2" id="pesquisa_caixa_movimentacao" accesskey="b" onkeyup='buscar_caixa_movimentacao()'>
+</div>
+
+
+
+<div class="col-md-8 col-xs-12 text-right">
+	<a href="principal.php#!adicionar_caixa_movimentacao" class="btn btn-success" accesskey="a">
+		<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Adicionar Caixa Movimentacao
+	</a>
+</div>
+
+<br><br>
+
+<div id="conteudoCaixa_movimentacao"></div>
+
+<script type="text/javascript">
+	verificaAcess('caixa_movimentacao');
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_lista_caixa_movimentacao.js"></script>

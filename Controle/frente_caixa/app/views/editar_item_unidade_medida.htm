@@ -1,0 +1,58 @@
+
+
+<h1>Editar: Item Unidade Medida</h1>
+
+<div class="text-right">
+	<a href="principal.php#!item_unidade_medida" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Quantidade &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="number" class="form-control" id="quantidade_item_unidade_medida" onkeyup="limitarValorNum('quantidade_item_unidade_medida', );"  accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Item &nbsp;&nbsp;<span style='color: red'>*</span>
+	<div id="itemDiv"></div>
+</div>
+<div class="col-md-4">
+	<br>Unidade Medida &nbsp;&nbsp;<span style='color: red'>*</span>
+	<div id="unidade_medidaDiv"></div>
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_item_unidade_medida" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_atualizacao_item_unidade_medida">
+			<script>$("#data_atualizacao_item_unidade_medida").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='atualizarrRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Atualizar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('item_unidade_medida');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_editar_item_unidade_medida.js"></script>
+
+<script type="text/javascript" src="app/js/combo/itemComboPre.js"></script>
+<script type="text/javascript" src="app/js/combo/itemComboGrade.js"></script>
+<script type="text/javascript" src="app/js/combo/unidade_medidaComboPre.js"></script>
+<script type="text/javascript" src="app/js/combo/unidade_medidaComboGrade.js"></script>
+<div id="scriptsAdicionais"></div>

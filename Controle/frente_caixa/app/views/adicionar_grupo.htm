@@ -1,0 +1,59 @@
+
+
+<h1>Adicionar: Grupo</h1>
+
+<div class="text-right">
+	<a href="principal.php#!grupo" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Descrição &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="text" maxlength="100" class="form-control" id="descricao_grupo" accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Imagem &nbsp;&nbsp;<span style='color: red'>*</span>
+	<button onclick="chamarModalImagem('imagem_grupo', 'adicionar_grupo', 'img')" class="btn" >
+		Selecionar Imagem
+	</button>
+	<input type="text" class="form-control" id="imagem_grupo" disabled>
+</div>
+<div class="col-md-4">
+	<br>Filial &nbsp;&nbsp;<span style='color: red'>*</span>
+	<div id="filialDiv">
+		<input type="text" value="Aguardando seleção..." class="form-control" disabled>
+	</div>
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_grupo" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_atualizacao_grupo">
+			<script>$("#data_atualizacao_grupo").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='gravarRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Gravar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('grupo');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_adicionar_grupo.js"></script>
+
+<script type="text/javascript" src="app/js/combo/filialCombo.js"></script>

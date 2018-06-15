@@ -1,0 +1,45 @@
+
+
+<h1>Adicionar: Empresa</h1>
+
+<div class="text-right">
+	<a href="principal.php#!empresa" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Razão Social &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="text" maxlength="200" class="form-control" id="razao_social_empresa" accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_empresa" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_atualizacao_empresa">
+			<script>$("#data_atualizacao_empresa").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='gravarRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Gravar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('empresa');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_adicionar_empresa.js"></script>
+

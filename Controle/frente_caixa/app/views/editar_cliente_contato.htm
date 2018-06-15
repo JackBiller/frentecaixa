@@ -1,0 +1,60 @@
+
+
+<h1>Editar: Cliente Contato</h1>
+
+<div class="text-right">
+	<a href="principal.php#!cliente_contato" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Telefone &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="text" maxlength="100" class="form-control" id="telefone_cliente_contato" accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Celular &nbsp;&nbsp;
+	<input type="text" maxlength="100" class="form-control" id="celular_cliente_contato" >
+</div>
+<div class="col-md-4">
+	<br>Email &nbsp;&nbsp;
+	<input type="text" maxlength="100" class="form-control" id="email_cliente_contato" >
+</div>
+<div class="col-md-4">
+	<br>Cliente &nbsp;&nbsp;
+	<div id="clienteDiv"></div>
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_cliente_contato" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_atualizacao_cliente_contato">
+			<script>$("#data_atualizacao_cliente_contato").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='atualizarrRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Atualizar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('cliente_contato');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_editar_cliente_contato.js"></script>
+
+<script type="text/javascript" src="app/js/combo/clienteComboPre.js"></script>
+<script type="text/javascript" src="app/js/combo/clienteComboGrade.js"></script>
+<div id="scriptsAdicionais"></div>

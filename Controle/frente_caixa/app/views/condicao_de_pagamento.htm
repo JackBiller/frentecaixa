@@ -1,0 +1,24 @@
+
+<h1>Condição De Pagamento</h1>
+
+<div class="col-md-4 col-xs-12">
+	<input class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon2" id="pesquisa_condicao_de_pagamento" accesskey="b" onkeyup='buscar_condicao_de_pagamento()'>
+</div>
+
+
+
+<div class="col-md-8 col-xs-12 text-right">
+	<a href="principal.php#!adicionar_condicao_de_pagamento" class="btn btn-success" accesskey="a">
+		<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Adicionar Condição De Pagamento
+	</a>
+</div>
+
+<br><br>
+
+<div id="conteudoCondicao_de_pagamento"></div>
+
+<script type="text/javascript">
+	verificaAcess('condicao_de_pagamento');
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_lista_condicao_de_pagamento.js"></script>

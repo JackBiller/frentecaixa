@@ -1,0 +1,26 @@
+
+<h1>Pedido Item</h1>
+<h3 style='display: none'>Pedido: <span id="nomePedido"></span></h3>
+
+<span id="botaoVoltarGrade"></span>
+<div class="col-md-4 col-xs-12">
+	<input class="form-control" placeholder="Pesquisar..." aria-describedby="basic-addon2" id="pesquisa_pedido_item" accesskey="b" onkeyup='buscar_pedido_item()'>
+</div>
+
+
+<div class="col-md-8 col-xs-12 text-right">
+	<!-- &nbsp; -->
+	<a href="principal.php#!adicionar_grade_pedido_item-pedido" class="btn btn-success" accesskey="a">
+		<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;Adicionar Pedido Item
+	</a>
+</div>
+
+<br><br>
+
+<script type="text/javascript">
+	verificaAcess('pedido_item-pedido');
+</script>
+
+<div id="conteudoPedido_item"></div>
+
+<script type="text/javascript" src="app/js/ajax/ajax_grade_pedido_item-pedido.js"></script>

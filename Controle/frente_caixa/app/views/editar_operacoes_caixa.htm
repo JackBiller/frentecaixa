@@ -1,0 +1,46 @@
+
+
+<h1>Editar: Operações Caixa</h1>
+
+<div class="text-right">
+	<a href="principal.php#!operacoes_caixa" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Descrição &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="text" maxlength="200" class="form-control" id="descricao_operacoes_caixa" accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_operacoes_caixa" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_atualizacao_operacoes_caixa">
+			<script>$("#data_atualizacao_operacoes_caixa").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='atualizarrRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Atualizar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('operacoes_caixa');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_editar_operacoes_caixa.js"></script>
+
+<div id="scriptsAdicionais"></div>

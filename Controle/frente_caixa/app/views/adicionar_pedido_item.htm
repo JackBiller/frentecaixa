@@ -1,0 +1,74 @@
+
+
+<h1>Adicionar: Pedido Item</h1>
+
+<div class="text-right">
+	<a href="principal.php#!pedido_item" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Quantidade &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="number" class="form-control" id="quantidade_pedido_item" onkeyup="limitarValorNum('quantidade_pedido_item', );"  accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Valor Unitário &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="number" class="form-control" id="valor_unitario_pedido_item" onkeyup="limitarValorNum('valor_unitario_pedido_item', );"  >
+</div>
+<div class="col-md-4">
+	<br>Valor Total &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="number" class="form-control" id="valor_total_pedido_item" onkeyup="limitarValorNum('valor_total_pedido_item', );"  >
+</div>
+<div class="col-md-4">
+	<br>Item &nbsp;&nbsp;
+	<div id="itemDiv">
+		<input type="text" value="Aguardando seleção..." class="form-control" disabled>
+	</div>
+</div>
+<div class="col-md-4">
+	<br>Item Unidade Medida &nbsp;&nbsp;
+	<div id="item_unidade_medidaDiv">
+		<input type="text" value="Aguardando seleção..." class="form-control" disabled>
+	</div>
+</div>
+<div class="col-md-4">
+	<br>Pedido &nbsp;&nbsp;
+	<div id="pedidoDiv">
+		<input type="text" value="Aguardando seleção..." class="form-control" disabled>
+	</div>
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_pedido_item" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="data_atualizacao_pedido_item">
+			<script>$("#data_atualizacao_pedido_item").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='gravarRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Gravar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('pedido_item');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_adicionar_pedido_item.js"></script>
+
+<script type="text/javascript" src="app/js/combo/itemCombo.js"></script>
+<script type="text/javascript" src="app/js/combo/item_unidade_medidaCombo.js"></script>
+<script type="text/javascript" src="app/js/combo/pedidoCombo.js"></script>

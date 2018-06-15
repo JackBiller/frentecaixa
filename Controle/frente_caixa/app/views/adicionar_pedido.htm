@@ -1,0 +1,77 @@
+
+
+<h1>Adicionar: Pedido</h1>
+
+<div class="text-right">
+	<a href="principal.php#!pedido" class="btn btn-primary" accesskey="v">
+		<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Voltar
+	</a>
+</div>
+<br>
+<div class="row">
+<div class="col-md-4">
+	<br>Documento &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="text" maxlength="200" class="form-control" id="documento_pedido" accesskey="i">
+</div>
+<div class="col-md-4">
+	<br>Total &nbsp;&nbsp;<span style='color: red'>*</span>
+	<input type="number" class="form-control" id="total_pedido" onkeyup="limitarValorNum('total_pedido', );"  >
+</div>
+<div class="col-md-4">
+	<br>Cliente &nbsp;&nbsp;
+	<div id="clienteDiv">
+		<input type="text" value="Aguardando seleção..." class="form-control" disabled>
+	</div>
+</div>
+<div class="col-md-4">
+	<br>Nome Cliente &nbsp;&nbsp;
+	<input type="text" maxlength="100" class="form-control" id="nome_cliente_pedido" >
+</div>
+<div class="col-md-4">
+	<br>Finalizado? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_finalizado_pedido" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+<div class="col-md-4">
+	<br>Filial &nbsp;&nbsp;<span style='color: red'>*</span>
+	<div id="filialDiv">
+		<input type="text" value="Aguardando seleção..." class="form-control" disabled>
+	</div>
+</div>
+<div class="col-md-4">
+	<br>Ativo? &nbsp;&nbsp;<span style='color: red'>*</span>
+	<select class="form-control" id="bool_ativo_pedido" >
+		<option value="1" selected>Sim</option>
+		<option value="0">Não</option>
+	</select>
+</div>
+	<div class="col-md-12 text-center">
+		<br>
+		
+			<input type="hidden" id="emissao_pedido">
+			<script>$("#emissao_pedido").val("1")</script>
+			
+			<input type="hidden" id="data_atualizacao_pedido">
+			<script>$("#data_atualizacao_pedido").val("1")</script>
+			
+			<input type="hidden" id="usuario_id">
+			<script>$("#usuario_id").val($("#usuario").val())</script>
+			
+		<button class="btn btn-success" onclick='gravarRegistro()' accesskey="s">
+			<i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Gravar
+		</button>
+	</div>
+</div>
+
+<script type="text/javascript">
+	verificaAcess('pedido');
+
+	
+</script>
+
+<script type="text/javascript" src="app/js/ajax/ajax_adicionar_pedido.js"></script>
+
+<script type="text/javascript" src="app/js/combo/clienteCombo.js"></script>
+<script type="text/javascript" src="app/js/combo/filialCombo.js"></script>
