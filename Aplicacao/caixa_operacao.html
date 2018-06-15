@@ -19,6 +19,7 @@
 	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
 
 	<script type="text/javascript" src="js/jQuery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -64,18 +65,48 @@
 					<input type="text" class="form-control">
 				</div>
 			</div>
-
 			<br>
 
-<!--   
+<!-- 
 /****************************** OPÇÃO FUTURA *********************************/
 	Leitura
 	<input type="text" id="leitura">
--->
+ -->
+
+			<div >
+				<div style="position: absolute;right: 15px; top: 2px;">
+					<button class="btn btn-default" onclick="viewGrupoItem()" id="buttonMiniViewGrupoItem">
+						<i class="fa fa-minus"></i>
+					</button>
+					<script type="text/javascript">
+						var statusTelaGrupoItem  = true;
+
+						function viewGrupoItem(){
+							var icon = "";
+							if (statusTelaGrupoItem) {
+								statusTelaGrupoItem =  false;
+								$("#tabelaGrupos").hide(1000);
+								icon = "<i class='fa fa-plus'></i>";
+							} else {
+								statusTelaGrupoItem = true;
+								$("#tabelaGrupos").show(1000);
+								icon = "<i class='fa fa-minus'></i>";
+							}
+							$("#buttonMiniViewGrupoItem").html(icon);
+						}
+					</script>
+				</div>
+				<div class=""></div>
+			</div>
 
 		</div>
-		<div class="col-md-6" id="itensPedido">
-			
+		<div id="tabelaGrupos">
+			<div class="col-xs-4 col-md-3 col-lg-2 text-center">
+				<!-- IMAGEM DO GRUPO -->
+				<!-- <img src="" width="80%"> -->
+				<!-- DESCRIÇÃO DELE -->
+				<!-- <p>**GRUPO**</p> -->
+			</div>
 		</div>
 	</div>
 
