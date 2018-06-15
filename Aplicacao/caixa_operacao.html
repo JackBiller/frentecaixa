@@ -4,7 +4,10 @@
 	<title>Frente de Caixa</title>
 
 	<script type="text/javascript">
-		locaStorage.setItem('usuarioGlobal', data);
+		var usuarioGlobal = locaStorage.getItem('usuarioGlobal', data);
+		usuarioGlobal = JSON.parse(usuarioGlobal);
+		var caixaGlobal = locaStorage.getItem('caixaGlobal');
+		caixaGlobal = JSON.parse('caixaGlobal');
 	</script>
 
 	<meta charset="utf-8" />
@@ -44,24 +47,37 @@
 <body>
 
 	<div class="col-md-11 col-md-offset-1 conteudoLocal">
-		<table class="table">
-			<tr>
-				<td>
-					<div id="caixaSelecaotDiv">
-						<select id="caixa" class="form-control"></select>
-					</div>
-				</td>
-				<td>
-					Valor de Entrada
-					<input type="tel" id="valorInicial" class="form-control">
-				</td>
-			</tr>
-		</table>
+		
+		<div class="col-md-6" id="">
+			Cliente
+			<input type="text" id="cliente">
+
+			Item
+			<br>
+			<div class="col-sm-4 col-md-3 col-lg-2">
+				Codigo
+				<input type="number" id="codigoItem" onkeyup="/* autlizaPedido(this.value) */" class="form-control">
+			</div>
+			<div class="col-sm-8 col-md-9 col-lg-10">
+				Descricao
+				<div id="comboClienteDiv">
+					<input type="text" class="form-control">
+				</div>
+			</div>
+
+			<br>
+
+<!--   
+/****************************** OPÇÃO FUTURA *********************************/
+	Leitura
+	<input type="text" id="leitura">
+-->
+
+		</div>
+		<div class="col-md-6" id="itensPedido">
+			
+		</div>
 	</div>
-
-
-
-
 
 
 <script type="text/javascript">
